@@ -1,5 +1,57 @@
-
 import { Tractor, Car, BadgeCheck, Leaf, Users, LineChart } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+const giftedStudImages = [
+  "https://images.unsplash.com/photo-1570824104453-508955ab713e?q=80&w=1000", // Goat
+  "https://images.unsplash.com/photo-1596733430284-f7437764b1a9?q=80&w=1000", // Sheep 
+  "https://images.unsplash.com/photo-1567201080580-bfcc97dae346?q=80&w=1000", // Farm
+  "https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=1000", // Agricultural landscape
+];
+
+const transportImages = [
+  "https://images.unsplash.com/photo-1590009617786-6d054a2a3c7c?q=80&w=1000", // Taxi
+  "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=1000", // Transport
+  "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1000", // Driving
+  "https://images.unsplash.com/photo-1511886929837-354d654373b3?q=80&w=1000", // Car lights
+];
+
+const ImageGallery = ({ images, title }: { images: string[], title: string }) => {
+  return (
+    <div className="mt-10">
+      <h3 className="text-xl font-semibold mb-4">{title}</h3>
+      <Carousel className="w-full">
+        <CarouselContent>
+          {images.map((src, index) => (
+            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+              <div className="p-1">
+                <div className="overflow-hidden rounded-lg border border-gray-200 shadow-sm">
+                  <AspectRatio ratio={4/3} className="bg-gray-100">
+                    <img
+                      src={src}
+                      alt={`${title} image ${index + 1}`}
+                      className="h-full w-full object-cover transition-all hover:scale-105 duration-300"
+                    />
+                  </AspectRatio>
+                </div>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <div className="flex justify-end gap-2 mt-2">
+          <CarouselPrevious className="relative static left-0 right-0 translate-y-0 bg-white border-honeymark-orange text-honeymark-orange hover:bg-honeymark-orange hover:text-white" />
+          <CarouselNext className="relative static left-0 right-0 translate-y-0 bg-white border-honeymark-orange text-honeymark-orange hover:bg-honeymark-orange hover:text-white" />
+        </div>
+      </Carousel>
+    </div>
+  );
+};
 
 const Services = () => {
   return (
@@ -89,6 +141,12 @@ const Services = () => {
               </p>
             </div>
           </div>
+
+          {/* Image Gallery for Gifted Stud Breeders */}
+          <ImageGallery 
+            images={giftedStudImages} 
+            title="Gifted Stud Breeders Gallery" 
+          />
         </div>
       </section>
 
@@ -143,6 +201,12 @@ const Services = () => {
               </p>
             </div>
           </div>
+
+          {/* Image Gallery for Honeymark Taxi */}
+          <ImageGallery 
+            images={transportImages} 
+            title="Honeymark Taxi and Transport Gallery" 
+          />
 
           {/* Goals */}
           <div className="mt-16 bg-white p-8 rounded-lg shadow-sm">
