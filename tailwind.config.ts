@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -51,6 +52,13 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				// Custom colors for Honeymark
+				honeymark: {
+					orange: '#F97316',
+					green: '#4CAF50',
+					yellow: '#F5B800',
+					brown: '#8B4513',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

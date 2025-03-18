@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +36,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -98,4 +92,50 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Custom styling for Honeymark */
+.honeymark-orange-bg {
+  background-color: #F97316;
+}
+
+.honeymark-green-bg {
+  background-color: #4CAF50;
+}
+
+.honeymark-yellow-bg {
+  background-color: #F5B800;
+}
+
+.honeymark-brown {
+  color: #8B4513;
+}
+
+.wave-divider {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+}
+
+.wave-divider::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10px;
+  background-size: 20px 40px;
+  background-repeat: repeat-x;
+}
+
+.orange-to-green {
+  background: linear-gradient(90deg, #F97316 0%, #4CAF50 100%);
+}
+
+.yellow-to-orange {
+  background: linear-gradient(90deg, #F5B800 0%, #F97316 100%);
+}
+
+.green-to-yellow {
+  background: linear-gradient(90deg, #4CAF50 0%, #F5B800 100%);
 }
