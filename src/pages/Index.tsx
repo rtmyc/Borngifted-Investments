@@ -16,6 +16,7 @@ const Index = () => {
         imageSrc="/lovable-uploads/f8c54092-d80d-4c5c-b9ff-0fa11935e81e.png"
         imageAlt="Honeymark Investments"
         bgColor="bg-honeymark-orange"
+        bgImageSrc="/lovable-uploads/bbf53e52-60a0-4041-98b1-a460aedaab0e.png"
       />
 
       {/* Intro Section */}

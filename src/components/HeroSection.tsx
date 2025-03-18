@@ -11,6 +11,7 @@ interface HeroSectionProps {
   imageSrc: string;
   imageAlt: string;
   bgColor: string;
+  bgImageSrc?: string;
 }
 
 const HeroSection = ({
@@ -21,10 +22,24 @@ const HeroSection = ({
   imageSrc,
   imageAlt,
   bgColor,
+  bgImageSrc,
 }: HeroSectionProps) => {
   return (
-    <section className={`${bgColor} py-16 md:py-24`}>
-      <div className="container mx-auto px-4">
+    <section 
+      className={`py-16 md:py-24 relative`}
+      style={{
+        backgroundImage: bgImageSrc ? `url(${bgImageSrc})` : 'none',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      {/* Overlay with bgColor */}
+      <div 
+        className={`absolute inset-0 ${bgColor} opacity-85`}
+        aria-hidden="true"
+      ></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
