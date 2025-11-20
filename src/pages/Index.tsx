@@ -17,14 +17,14 @@ const Index = () => {
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-white rounded-full blur-3xl"></div>
         </div>
 
-        <div className="container mx-auto px-4 py-12 md:py-20 relative z-10">
-          <div className="max-w-4xl mx-auto text-center text-white space-y-6">
+        <div className="container mx-auto px-4 py-8 sm:py-10 md:py-14 relative z-10">
+          <div className="max-w-4xl mx-auto text-center text-white space-y-4 sm:space-y-5">
             {/* Logo */}
-            <div className="flex justify-center mb-6">
+            <div className="flex justify-center mb-3 sm:mb-4">
               <img 
                 src={IMAGES.logos.official}
                 alt="Honeymark Investments Official Logo" 
-                className="h-24 sm:h-32 md:h-40 w-auto drop-shadow-2xl"
+                className="h-20 sm:h-28 md:h-36 w-auto drop-shadow-2xl"
                 loading="eager"
               />
             </div>
@@ -41,7 +41,7 @@ const Index = () => {
             </p>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6 px-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-4 sm:pt-5 px-4">
               <Link to="/services">
                 <Button size="lg" className="w-full sm:w-auto bg-white text-honeymark-green hover:bg-gray-100 font-semibold text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 rounded-xl shadow-xl">
                   Explore Our Services
