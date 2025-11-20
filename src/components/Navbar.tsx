@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { IMAGES, COMPANY_INFO } from "@/constants";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,15 +22,17 @@ const Navbar = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link to="/" className="flex items-center space-x-2">
+    <header className="sticky top-0 z-50 bg-white shadow-md">
+      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+        <Link to="/" className="flex items-center space-x-3 group">
           <img 
-            src="/lovable-uploads/69aeeb1a-6652-4c18-a28c-24889436a45c.png" 
-            alt="Honeymark Investments Logo" 
-            className="h-10"
+            src={IMAGES.logos.official}
+            alt={`${COMPANY_INFO.name} Logo`}
+            className="h-12 md:h-14 w-auto transition-transform duration-300 group-hover:scale-105"
           />
-          <span className="text-xl font-bold text-honeymark-brown hidden sm:inline">Honeymark Investments</span>
+          <span className="text-lg md:text-xl font-heading font-bold text-honeymark-brown hidden sm:inline">
+            {COMPANY_INFO.name}
+          </span>
         </Link>
 
         {/* Desktop Navigation */}

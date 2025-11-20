@@ -3,11 +3,13 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
+import { COMPANY_INFO, BUSINESS_HOURS } from "@/constants";
+import type { ContactInfo } from "@/types";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactInfo>({
     name: "",
     email: "",
     phone: "",
@@ -28,21 +30,16 @@ const Contact = () => {
     // Simulate form submission
     setTimeout(() => {
       toast({
-        title: "Message Sent",
-        description: "Thank you for contacting us. We'll get back to you soon!",
+        title: "Message Sent!",
+        description: "We'll get back to you soon.",
       });
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
+      setFormData({ name: "", email: "", phone: "", message: "" });
       setIsSubmitting(false);
-    }, 1500);
+    }, 1000);
   };
 
   return (
-    <div>
+    <div className="animate-in fade-in duration-500">
       {/* Header */}
       <section className="bg-honeymark-yellow py-16">
         <div className="container mx-auto px-4 text-center">
@@ -68,7 +65,18 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Phone</h3>
-                    <p className="text-gray-700">+263 71 673 3095</p>
+                    <a 
+                      href={`tel:${COMPANY_INFO.phones.primary}`}
+                      className="text-gray-700 hover:text-honeymark-orange transition-colors block"
+                    >
+                      {COMPANY_INFO.phones.formatted.primary}
+                    </a>
+                    <a 
+                      href={`tel:${COMPANY_INFO.phones.secondary}`}
+                      className="text-gray-700 hover:text-honeymark-orange transition-colors block"
+                    >
+                      {COMPANY_INFO.phones.formatted.secondary}
+                    </a>
                     <p className="text-gray-600 text-sm mt-1">Contact: Thomas</p>
                   </div>
                 </div>
@@ -79,7 +87,12 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Email</h3>
-                    <p className="text-gray-700">honeymarkinvestments@gmail.com</p>
+                    <a 
+                      href={`mailto:${COMPANY_INFO.email}`}
+                      className="text-gray-700 hover:text-honeymark-orange transition-colors"
+                    >
+                      {COMPANY_INFO.email}
+                    </a>
                   </div>
                 </div>
                 
@@ -89,27 +102,30 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Farm Location</h3>
-                    <p className="text-gray-700">125.5-hectare farm in Troutbeck, Nyanga</p>
-                    <p className="text-gray-600 text-sm mt-1">Established on 12th November 2020</p>
+                    <p className="text-gray-700">{COMPANY_INFO.location.address}</p>
+                    <p className="text-gray-600 text-sm mt-1">Established on {COMPANY_INFO.location.established}</p>
                   </div>
                 </div>
               </div>
               
               <div className="mt-12">
-                <h3 className="text-xl font-bold mb-4">Business Hours</h3>
+                <h3 className="text-xl font-bold mb-4">
+                  <Clock className="h-5 w-5 inline mr-2 text-honeymark-green" />
+                  Business Hours
+                </h3>
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <ul className="space-y-2">
                     <li className="flex justify-between">
                       <span className="font-medium">Monday - Friday:</span>
-                      <span>8:00 AM - 5:00 PM</span>
+                      <span>{BUSINESS_HOURS.weekday}</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="font-medium">Saturday:</span>
-                      <span>9:00 AM - 2:00 PM</span>
+                      <span>{BUSINESS_HOURS.saturday}</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="font-medium">Sunday:</span>
-                      <span>Closed</span>
+                      <span>{BUSINESS_HOURS.sunday}</span>
                     </li>
                   </ul>
                 </div>

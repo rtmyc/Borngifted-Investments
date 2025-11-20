@@ -19,6 +19,11 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+				serif: ['Playfair Display', 'Georgia', 'serif'],
+				heading: ['Playfair Display', 'Georgia', 'serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -53,12 +58,21 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Custom colors for Honeymark
+				// Custom colors for Honeymark (Refined based on official logo)
 				honeymark: {
-					orange: '#F97316',
-					green: '#4CAF50',
-					yellow: '#F5B800',
-					brown: '#8B4513',
+					// Primary colors from official logo
+					green: '#1B5E20',      // Forest Green (main brand color)
+					orange: '#F5A623',     // Sunset Orange
+					yellow: '#FFD54F',     // Golden Yellow
+					// Accent colors
+					brown: '#5D4037',      // Deep Brown
+					cream: '#FFF8E1',      // Light Cream
+					sage: '#7CB342',       // Sage Green (hover states)
+					// Legacy colors (kept for transition)
+					'orange-legacy': '#F97316',
+					'green-legacy': '#4CAF50',
+					'yellow-legacy': '#F5B800',
+					'brown-legacy': '#8B4513',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

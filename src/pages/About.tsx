@@ -3,7 +3,7 @@ import { CheckCircle, MapPin, Calendar } from "lucide-react";
 
 const About = () => {
   return (
-    <div>
+    <div className="animate-in fade-in duration-500">
       {/* Header */}
       <section className="bg-honeymark-green py-16">
         <div className="container mx-auto px-4 text-center">
