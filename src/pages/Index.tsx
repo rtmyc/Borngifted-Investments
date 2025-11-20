@@ -10,7 +10,8 @@ const Index = () => {
   return (
     <div className="flex flex-col min-h-screen animate-in fade-in duration-500">
       {/* Modern Hero Section - Mobile Optimized */}
-      <section className="relative bg-gradient-to-br from-honeymark-orange via-honeymark-yellow to-honeymark-green overflow-hidden animate-in slide-in-from-top duration-700">\n        {/* Decorative Shapes */}
+      <section className="relative bg-gradient-to-br from-honeymark-orange via-honeymark-yellow to-honeymark-green overflow-hidden animate-in slide-in-from-top duration-700">
+        {/* Decorative Shapes */}
         <div className="absolute inset-0 overflow-hidden opacity-10">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -48,7 +49,7 @@ const Index = () => {
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-honeymark-green font-semibold text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 rounded-xl">
+                <Button size="lg" className="w-full sm:w-auto bg-transparent border-2 border-white text-white hover:bg-white hover:text-honeymark-green font-semibold text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 rounded-xl transition-all duration-300">
                   Get in Touch
                 </Button>
               </Link>
