@@ -17,7 +17,7 @@ export const COMPANY_INFO = {
   },
   social: {
     instagram: "https://www.instagram.com/honeymark_investments",
-    facebook: "https://www.facebook.com/profile.php?id=100095067257226",
+    facebook: "https://www.facebook.com/share/17YgPmoyDR/",
   },
 } as const;
 
