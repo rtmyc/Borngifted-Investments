@@ -61,7 +61,7 @@ const About = () => {
               <div className="p-8">
                 <div className="flex items-center mb-6">
                   <img 
-                    src="/lovable-uploads/bbf53e52-60a0-4041-98b1-a460aedaab0e.png" 
+                    src="/official-logo.jpg" 
                     alt="Gifted Stud Breeders Logo" 
                     className="h-12 mr-4"
                   />
