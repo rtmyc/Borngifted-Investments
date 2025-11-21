@@ -30,7 +30,7 @@ const Navbar = () => {
             alt={`${COMPANY_INFO.name} Logo`}
             className="h-12 md:h-14 w-auto transition-transform duration-300 group-hover:scale-105"
           />
-          <span className="text-lg md:text-xl font-heading font-bold text-honeymark-brown hidden sm:inline">
+          <span className="text-base sm:text-lg md:text-xl font-heading font-bold text-honeymark-brown">
             {COMPANY_INFO.name}
           </span>
         </Link>
@@ -75,10 +75,11 @@ const Navbar = () => {
         </Button>
       </div>
 
-      {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white pt-2 pb-4 shadow-lg">
-          <nav className="flex flex-col space-y-4 px-4">
+      {/* Mobile Navigation with Smooth Animation */}
+      <div className={`md:hidden bg-white shadow-lg overflow-hidden transition-all duration-300 ease-in-out ${
+        isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+      }`}>
+        <nav className="flex flex-col space-y-4 px-4 py-4">
             <Link 
               to="/" 
               className={`font-medium py-2 transition-colors hover:text-honeymark-orange ${isActiveLink('/') ? 'text-honeymark-orange' : 'text-gray-700'}`}
@@ -109,7 +110,6 @@ const Navbar = () => {
             </Link>
           </nav>
         </div>
-      )}
     </header>
   );
 };

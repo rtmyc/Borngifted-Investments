@@ -1,5 +1,6 @@
 import { Tractor, Car, BadgeCheck, Leaf, Users, LineChart, CheckCircle2 } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useEffect } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -56,6 +57,19 @@ const ImageGallery = ({ images, title }: { images: string[], title: string }) =>
 };
 
 const Services = () => {
+  useEffect(() => {
+    // Scroll to section if hash is present in URL
+    const hash = window.location.hash;
+    if (hash) {
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  }, []);
+
   return (
     <div className="animate-in fade-in duration-500">
       {/* Modern Header with Gradient */}
@@ -81,7 +95,7 @@ const Services = () => {
       </section>
 
       {/* Gifted Stud Breeders Services */}
-      <section className="py-20 bg-white">
+      <section id="livestock" className="py-20 bg-white scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center gap-12 mb-16">
             <div className="lg:w-1/3 flex justify-center">
@@ -154,7 +168,7 @@ const Services = () => {
       <div className="h-3 bg-gradient-to-r from-honeymark-orange via-honeymark-yellow to-honeymark-green"></div>
 
       {/* Honeymark Taxi Services */}
-      <section className="py-20 bg-gradient-to-br from-honeymark-cream to-gray-50">
+      <section id="transport" className="py-20 bg-gradient-to-br from-honeymark-cream to-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center gap-12 mb-16">
             <div className="lg:w-1/3 flex justify-center">

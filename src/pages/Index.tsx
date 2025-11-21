@@ -9,12 +9,15 @@ import { IMAGES } from "@/constants";
 const Index = () => {
   return (
     <div className="flex flex-col min-h-screen animate-in fade-in duration-500">
-      {/* Modern Hero Section - Mobile Optimized */}
-      <section className="relative bg-gradient-to-br from-honeymark-orange via-honeymark-yellow to-honeymark-green overflow-hidden animate-in slide-in-from-top duration-700">
+      {/* Modern Hero Section - Mobile Optimized with Animated Gradient */}
+      <section className="relative overflow-hidden animate-in slide-in-from-top duration-700">
+        {/* Animated Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-honeymark-orange via-honeymark-yellow to-honeymark-green animate-gradient-shift bg-[length:200%_200%]"></div>
+        
         {/* Decorative Shapes */}
         <div className="absolute inset-0 overflow-hidden opacity-10">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
         </div>
 
         <div className="container mx-auto px-4 py-8 sm:py-10 md:py-14 relative z-10">
@@ -87,10 +90,10 @@ const Index = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
             {/* Gifted Stud Breeders Card */}
-            <div className="group relative bg-gradient-to-br from-honeymark-orange to-honeymark-yellow rounded-2xl sm:rounded-3xl p-1 hover:scale-[1.02] transition-all duration-300">
+            <div className="group relative bg-gradient-to-br from-honeymark-orange to-honeymark-yellow rounded-2xl sm:rounded-3xl p-1 hover:scale-[1.03] hover:shadow-2xl transition-all duration-500">
               <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 h-full">
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-4 sm:mb-6">
-                  <div className="bg-gradient-to-br from-honeymark-orange to-honeymark-yellow w-16 h-16 sm:w-20 sm:h-20 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                  <div className="bg-gradient-to-br from-honeymark-orange to-honeymark-yellow w-16 h-16 sm:w-20 sm:h-20 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 flex-shrink-0">
                     <Tractor className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
                   </div>
                   <div className="text-center sm:text-left">
@@ -110,8 +113,8 @@ const Index = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to="/services">
-                  <Button className="w-full bg-gradient-to-r from-honeymark-orange to-honeymark-yellow text-white hover:opacity-90 font-semibold py-5 sm:py-6 rounded-xl text-base sm:text-lg">
+                <Link to="/services#livestock">
+                  <Button className="w-full bg-gradient-to-r from-honeymark-orange to-honeymark-yellow text-white hover:opacity-90 hover:shadow-2xl font-semibold py-5 sm:py-6 rounded-xl text-base sm:text-lg transition-all duration-300">
                     Learn More
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
@@ -120,10 +123,10 @@ const Index = () => {
             </div>
             
             {/* Honeymark Taxi Card */}
-            <div className="group relative bg-gradient-to-br from-honeymark-green to-honeymark-sage rounded-2xl sm:rounded-3xl p-1 hover:scale-[1.02] transition-all duration-300">
+            <div className="group relative bg-gradient-to-br from-honeymark-green to-honeymark-sage rounded-2xl sm:rounded-3xl p-1 hover:scale-[1.03] hover:shadow-2xl transition-all duration-500">
               <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 h-full">
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-4 sm:mb-6">
-                  <div className="bg-gradient-to-br from-honeymark-green to-honeymark-sage w-16 h-16 sm:w-20 sm:h-20 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                  <div className="bg-gradient-to-br from-honeymark-green to-honeymark-sage w-16 h-16 sm:w-20 sm:h-20 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 flex-shrink-0">
                     <Truck className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
                   </div>
                   <div className="text-center sm:text-left">
@@ -143,8 +146,8 @@ const Index = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to="/services">
-                  <Button className="w-full bg-gradient-to-r from-honeymark-green to-honeymark-sage text-white hover:opacity-90 font-semibold py-5 sm:py-6 rounded-xl text-base sm:text-lg">
+                <Link to="/services#transport">
+                  <Button className="w-full bg-gradient-to-r from-honeymark-green to-honeymark-sage text-white hover:opacity-90 hover:shadow-2xl font-semibold py-5 sm:py-6 rounded-xl text-base sm:text-lg transition-all duration-300">
                     Learn More
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>

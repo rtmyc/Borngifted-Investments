@@ -222,3 +222,20 @@
 .green-to-yellow {
   background: linear-gradient(90deg, #4CAF50 0%, #F5B800 100%);
 }
+
+/* Animated Gradient Background */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-shift {
+  animation: gradient-shift 15s ease infinite;
+}
