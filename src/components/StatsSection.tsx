@@ -62,7 +62,7 @@ const StatCard = ({ stat }: { stat: typeof stats[0] }) => {
 
 const StatsSection = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-honeymark-cream to-white relative overflow-hidden">
+    <section className="py-16 bg-white relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-64 h-64 bg-honeymark-orange rounded-full blur-3xl"></div>
