@@ -105,7 +105,7 @@ const Services = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-honeymark-orange to-honeymark-yellow rounded-3xl blur-2xl opacity-20"></div>
                 <img 
-                  src={IMAGES.logos.official}
+                  src={IMAGES.logos.giftedStud}
                   alt="Gifted Stud Breeders" 
                   className="relative h-40 md:h-48 w-auto drop-shadow-2xl"
                 />

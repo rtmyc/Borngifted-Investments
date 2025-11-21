@@ -25,8 +25,8 @@ const Index = () => {
             {/* Logo */}
             <div className="flex justify-center mb-3 sm:mb-4">
               <img 
-                src={IMAGES.logos.official}
-                alt="Honeymark Investments Official Logo" 
+                src={IMAGES.logos.borngifted}
+                alt="BornGifted Logo" 
                 className="h-20 sm:h-28 md:h-36 w-auto drop-shadow-2xl"
                 loading="eager"
               />
@@ -34,7 +34,7 @@ const Index = () => {
             
             {/* Text Content */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight">
-              Honeymark Investments
+              BornGifted Investments
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/95 font-medium px-4">
               Quality Agriculture and Transport Services for Zimbabwe
@@ -93,8 +93,8 @@ const Index = () => {
             <div className="group relative bg-gradient-to-br from-honeymark-orange to-honeymark-yellow rounded-2xl sm:rounded-3xl p-1 hover:scale-[1.03] hover:shadow-2xl transition-all duration-500">
               <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 h-full">
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-4 sm:mb-6">
-                  <div className="bg-gradient-to-br from-honeymark-orange to-honeymark-yellow w-16 h-16 sm:w-20 sm:h-20 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 flex-shrink-0">
-                    <Tractor className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
+                  <div className="bg-white w-16 h-16 sm:w-20 sm:h-20 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 flex-shrink-0 p-2">
+                    <img src={IMAGES.logos.giftedStud} alt="Gifted Stud Breeders" className="w-full h-full object-contain" />
                   </div>
                   <div className="text-center sm:text-left">
                     <h3 className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-gray-900">
@@ -126,8 +126,8 @@ const Index = () => {
             <div className="group relative bg-gradient-to-br from-honeymark-green to-honeymark-sage rounded-2xl sm:rounded-3xl p-1 hover:scale-[1.03] hover:shadow-2xl transition-all duration-500">
               <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 h-full">
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-4 sm:mb-6">
-                  <div className="bg-gradient-to-br from-honeymark-green to-honeymark-sage w-16 h-16 sm:w-20 sm:h-20 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 flex-shrink-0">
-                    <Truck className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
+                  <div className="bg-white w-16 h-16 sm:w-20 sm:h-20 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 flex-shrink-0 p-2">
+                    <img src={IMAGES.logos.honeymark} alt="Honeymark Taxi & Transport" className="w-full h-full object-contain" />
                   </div>
                   <div className="text-center sm:text-left">
                     <h3 className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-gray-900">

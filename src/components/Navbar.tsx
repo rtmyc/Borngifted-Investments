@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3 group">
           <img 
-            src={IMAGES.logos.official}
+            src={IMAGES.logos.borngifted}
             alt={`${COMPANY_INFO.name} Logo`}
             className="h-12 md:h-14 w-auto transition-transform duration-300 group-hover:scale-105"
           />

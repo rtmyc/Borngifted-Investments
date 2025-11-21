@@ -7,8 +7,8 @@ Allow: /
 # Disallow admin or private areas if any
 # Disallow: /admin/
 
-# Sitemap location (update this URL when deployed)
-Sitemap: https://honeymark-investments.com/sitemap.xml
+# Sitemap location
+Sitemap: https://borngifted.com/sitemap.xml
 
 # Crawl-delay (optional, helps prevent server overload)
 Crawl-delay: 1

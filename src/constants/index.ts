@@ -1,6 +1,6 @@
 // Company Information
 export const COMPANY_INFO = {
-  name: "Honeymark Investments",
+  name: "BornGifted Investments",
   tagline: "Quality Agriculture and Transport Services for Zimbabwe",
   email: "honeymarkinvestments@gmail.com",
   phones: {
@@ -175,9 +175,9 @@ export const GOALS = {
 // Image Paths
 export const IMAGES = {
   logos: {
-    official: "/official-logo.jpg", // Main official logo (livestock silhouette)
-    honeymark: "/lovable-uploads/69aeeb1a-6652-4c18-a28c-24889436a45c.png", // Bee logo (legacy)
-    giftedStud: "/lovable-uploads/bbf53e52-60a0-4041-98b1-a460aedaab0e.png", // Farm logo (legacy)
+    borngifted: "/borngifted-logo.jpg", // BornGifted parent company (lions/crest logo)
+    giftedStud: "/official-logo.jpg", // Gifted Stud Breeders (livestock silhouettes)
+    honeymark: "/lovable-uploads/69aeeb1a-6652-4c18-a28c-24889436a45c.png", // Honeymark Taxi (bee logo)
   },
   hero: {
     main: "/lovable-uploads/f8c54092-d80d-4c5c-b9ff-0fa11935e81e.png",

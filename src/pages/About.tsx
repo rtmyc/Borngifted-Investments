@@ -19,7 +19,7 @@ const About = () => {
             About Us
           </h1>
           <p className="text-xl md:text-2xl text-white/95 max-w-3xl mx-auto leading-relaxed">
-            Learn more about Honeymark Investments and our two business divisions.
+            Learn more about BornGifted Investments and our two business divisions.
           </p>
         </div>
         
@@ -36,13 +36,13 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="mb-12 text-center">
             <img 
-              src="/lovable-uploads/69aeeb1a-6652-4c18-a28c-24889436a45c.png" 
-              alt="Honeymark Investments Logo" 
+              src="/borngifted-logo.jpg" 
+              alt="BornGifted Logo" 
               className="h-20 mx-auto mb-6"
             />
-            <h2 className="text-3xl font-bold mb-6">Honeymark Investments</h2>
+            <h2 className="text-3xl font-bold mb-6">BornGifted Investments</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Honeymark Investments is a diversified company operating in the agriculture 
+              BornGifted Investments is a diversified company operating in the agriculture 
               and transportation sectors in Zimbabwe. We operate under two trade names:
               Gifted Stud Breeders and Honeymark Taxi and Transport Services.
             </p>
@@ -107,7 +107,7 @@ const About = () => {
                 <div className="flex items-center mb-6">
                   <img 
                     src="/lovable-uploads/69aeeb1a-6652-4c18-a28c-24889436a45c.png" 
-                    alt="Honeymark Investments Logo" 
+                    alt="Honeymark Taxi and Transport Logo" 
                     className="h-12 mr-4"
                   />
                   <h3 className="text-2xl font-bold">Honeymark Taxi and Transport</h3>
@@ -142,7 +142,7 @@ const About = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-6">Our Vision & Goals</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              At Honeymark Investments, we strive for excellence in everything we do.
+              At BornGifted Investments, we strive for excellence in everything we do.
             </p>
           </div>
           

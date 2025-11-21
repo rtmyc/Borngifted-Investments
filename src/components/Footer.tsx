@@ -12,13 +12,18 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">{COMPANY_INFO.name}</h3>
             <div className="flex items-center space-x-3 mb-2">
               <img 
-                src="/lovable-uploads/69aeeb1a-6652-4c18-a28c-24889436a45c.png" 
-                alt="Honeymark Investments Logo" 
+                src="/borngifted-logo.jpg" 
+                alt="BornGifted Logo" 
                 className="h-8"
               />
               <img 
-                src="/lovable-uploads/bbf53e52-60a0-4041-98b1-a460aedaab0e.png" 
+                src="/official-logo.jpg" 
                 alt="Gifted Stud Breeders Logo" 
+                className="h-8"
+              />
+              <img 
+                src="/lovable-uploads/69aeeb1a-6652-4c18-a28c-24889436a45c.png" 
+                alt="Honeymark Taxi Logo" 
                 className="h-8"
               />
             </div>
