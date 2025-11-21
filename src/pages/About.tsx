@@ -4,13 +4,30 @@ import { CheckCircle, MapPin, Calendar } from "lucide-react";
 const About = () => {
   return (
     <div className="animate-in fade-in duration-500">
-      {/* Header */}
-      <section className="bg-honeymark-green py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">About Us</h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
+      {/* Header with Animated Gradient */}
+      <section className="relative py-20 md:py-28 overflow-hidden">
+        {/* Animated Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-honeymark-green via-honeymark-sage to-honeymark-yellow animate-gradient-shift bg-[length:200%_200%]"></div>
+        
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        </div>
+        
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 drop-shadow-lg">
+            About Us
+          </h1>
+          <p className="text-xl md:text-2xl text-white/95 max-w-3xl mx-auto leading-relaxed">
             Learn more about Honeymark Investments and our two business divisions.
           </p>
+        </div>
+        
+        {/* Wave Divider */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg className="w-full h-16 md:h-20 fill-current text-white" viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+          </svg>
         </div>
       </section>
 
